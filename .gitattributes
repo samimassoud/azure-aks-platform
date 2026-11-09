@@ -1,0 +1,20 @@
+# Normalise line endings for text files; let Git detect text vs binary.
+* text=auto
+
+# Files that must always use LF, regardless of platform.
+*.sh      text eol=lf
+*.tf      text eol=lf
+*.tfvars  text eol=lf
+*.hcl     text eol=lf
+*.yaml    text eol=lf
+*.yml     text eol=lf
+*.md      text eol=lf
+*.json    text eol=lf
+
+# Binary assets.
+*.png  binary
+*.jpg  binary
+*.jpeg binary
+*.gif  binary
+*.ico  binary
+*.pdf  binary

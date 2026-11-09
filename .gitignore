@@ -1,0 +1,35 @@
+# Private working context (kept locally, never published)
+/memory/
+/TASKS.md
+
+# Local Claude Code configuration
+/.claude/settings.local.json
+
+# Terraform state and local configuration
+# (.terraform.lock.hcl is intentionally NOT ignored: commit it)
+**/.terraform/*
+*.tfstate
+*.tfstate.*
+*.tfvars
+*.tfvars.json
+!*.tfvars.example
+crash.log
+crash.*.log
+
+# Local secrets and credentials
+.env
+.env.*
+!.env.example
+kubeconfig*
+*.pem
+*.key
+*.pfx
+*.p12
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*~

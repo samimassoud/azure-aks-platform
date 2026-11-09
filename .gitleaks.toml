@@ -1,0 +1,14 @@
+# Gitleaks configuration for this repository.
+# Extends the default ruleset; every allowlist entry must carry a justification.
+
+[extend]
+useDefault = true
+
+[[allowlists]]
+# False positive: the public Valkey container image tag (e.g. ghcr.io/valkey-io/valkey:9.1.2-alpine3.24)
+# documented in docs/astronomy-shop/service-map.md. The generic-api-key rule matches it because the
+# line contains "valkey". An image tag is not a credential.
+description = "Public Valkey container image tags"
+targetRules = ["generic-api-key"]
+regexTarget = "line"
+regexes = ['''ghcr\.io/valkey-io/valkey:[0-9]+\.[0-9]+\.[0-9]+(-[0-9A-Za-z.]+)?''']
